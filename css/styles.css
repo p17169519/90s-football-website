@@ -1,0 +1,469 @@
+/* MOBILE AND GLOBAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Teko:wght@500&display=swap');
+
+/* applies to screens smaller than 500px (first breakpoint) */
+body {
+  color: #00FF00;
+  margin: 0;
+  font-family: 'Teko', sans-serif;
+  height: 100vh;
+}
+
+ body .indexBody {
+  overflow: hidden;
+}
+
+.homePage {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  background-image: url("../images/gazzaCrop.jpg");
+  /* img source: https://www.theguardian.com/football/2016/dec/29/football-quiz-the-1990s */
+  background-color: black;
+  background-size: cover;
+  background-position: right;
+  height: 20vh;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  padding-left: 0.5em;
+  background-color: black;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em;
+  border-bottom: solid;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  background-color: black;
+  height: 60px;
+}
+
+nav a {
+  padding: 0.5em;
+  text-decoration: none;
+  color: #00FF00;
+}
+
+nav a:hover, .button:hover {
+  color: white;
+}
+
+.slider img {
+  width: 8em;
+  border: solid;
+  border-radius: 10%
+}
+
+.slider {
+  position: fixed;
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+footer a h2 {
+  font-size: 25px;
+  margin: 0;
+  text-decoration: none;
+}
+
+footer a img {
+  width: 25px;
+  height: 25px;
+  background-color: #00FF00;
+  padding-top: 0;
+  margin-left: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 50px;
+  background-color: black;
+  justify-content: center;
+}
+
+footer a, header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 10px;
+  color: black;
+  background-image: url("../images/cloud.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 62vh;
+  max-width: 1120px;
+}
+
+.quote p {
+  font-size: 2em;
+  margin-bottom: 5px;
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+.quote h4 {
+  font-size: 1.5em;
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+/******************************** kits page styling START *************************/
+
+.kit {
+  text-align: center;
+  color: black;
+  border-bottom-style: solid;
+  border-bottom-color: #D7D7D7;
+  margin-left: 15px;
+}
+
+.kit p {
+  padding: 0 40px;
+  font-size: 1.2em;
+}
+
+.kit img {
+  width: 200px;
+  height: 200px;
+  border-style: inset;
+  border-color: black;
+  box-shadow: 5px 10px #00FF00;
+}
+
+.kit h2:hover, .kit p:hover {
+  background-color: #00FF00;
+}
+
+.clickable h3 {
+  margin-top: 0;
+  padding: 0;
+  background-color: black;
+  animation: glow 2s infinite;
+}
+
+.clickable {
+  animation: flip 4s;
+}
+
+/************************ kits page styling END *****************/
+
+/******************* quiz page styling START**************************/
+
+.quizContainer, .league {
+  border-style: inset;
+  border-color: black;
+  box-shadow: 5px 10px #00FF00;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+.quizContainer h2 {
+  padding-left: 10px;
+}
+
+.questionSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin: 0 20px;
+  font-size: 1.5em;
+}
+
+.button {
+  float: right;
+  font-size: 2em;
+  margin: 10px;
+  margin-right: 20px;
+  color: #00FF00;
+  background-color: black;
+  border: none;
+  border-radius: 10%;
+  font-family: inherit;
+  padding: 0 10px;
+}
+
+.button:hover {
+  transform:scale(1.1);
+}
+
+#quiz {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#score {
+  display: none;
+  margin: 0;
+  font-size: 3em;
+  background-color: black;
+  justify-content: center;
+  padding: 100px 0;
+  height: 30vh;
+}
+
+.quizContainer h2 {
+  color: white;
+}
+
+/************************ quiz styling END ************************/
+
+/************************* League styling START ********************/
+
+.league {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  max-width: 1200px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color:  #00FF00;
+  color: black;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #00FF00;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform:rotateX(1turn);
+  }
+}
+/* and above unless overwritten below */
+
+/**************** TABLET STYLES *******************************/
+
+@media screen and (min-width: 500px) {
+
+  /* applies to screens wider than 499px */
+
+  .wrapper, #quiz {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  .button {
+    grid-area: 4/2;
+    width: 60%;
+    font-size: 3em;
+    justify-self: end;
+    border-radius: 5%;
+  }
+
+/************************ kit styles START **************************/
+
+  .kit {
+    border-bottom: none;
+  }
+
+  .kit img {
+    width: 225px;
+    height: 225px;
+  }
+
+  .kit p {
+    font-size: 1.5em;
+  }
+
+  .kit h2 {
+    font-size: 2em;
+  }
+/********************************* kit styles END  *****************************/
+
+/************************** league styles START **************************/
+.league {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+/******************************* League styles END **********************/
+
+  nav {
+    position: relative;
+    font-size: 40px;
+    height: auto;
+  }
+
+  h1, #score {
+    font-size: 4em;
+  }
+
+  .quote p {
+    font-size: 3em;
+  }
+
+  .quote h4 {
+    font-size: 2.5em;
+  }
+
+  footer {
+    padding-bottom: 0;
+  }
+
+  footer a h2 {
+    font-size: 50px;
+  }
+
+  footer a img {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes appear {
+    0% {
+      transform: translateX(1500px);
+    }
+    100% {
+      transform: translateX(-400px);
+    }
+  }
+
+}
+
+/********************** additional media for header *******************************/
+@media screen and (min-width: 750px) {
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: none;
+    max-height: 200px;
+  }
+
+  .pic {
+    background-image: url("../images/gazzaCrop.jpg");
+    /* img source: https://www.theguardian.com/football/2016/dec/29/football-quiz-the-1990s */
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+}
+/********************* additional media END *********************/
+
+/******************** DESKTOP STYLES **************************/
+
+@media screen and (min-width: 1000px) {
+
+  /* applies to screens wider than 999px */
+
+  h1, #score {
+    font-size: 6em;
+  }
+
+  nav {
+   font-size: 50px;
+ }
+
+  nav a {
+   padding-top: 0;
+   padding-bottom: 0;
+ }
+
+  header {
+    height: 30vh;
+  }
+
+  .quote p {
+    font-size: 4em;
+  }
+
+  .quote h4 {
+    font-size: 3.5em;
+  }
+
+  .wrapper, #quiz {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .button {
+    grid-area: 3/3;
+    font-size: 4em;
+  }
+
+  .slider img {
+    width: 20em;
+    height: 10em;
+    border: solid;
+    border-radius: 10%
+  }
+
+  /******************************* kit styles START *********************************/
+
+  .kit img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .kit p {
+    font-size: 2em;
+  }
+
+  .kit h2 {
+    font-size: 2.5em;
+  }
+
+  /********************************* kit styles END  *************************/
+
+  /******************************** league styles START **********************/
+
+  .league {
+    font-size: 3em;
+  }
+  /******************************** league styles END **********************/
+
+}
